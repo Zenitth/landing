@@ -59,18 +59,18 @@ module.exports = function(grunt) {
     // },
 
     // JS min
-    // minified : {
-    //   files: {
-    //     src: [
-    //     'site/assets/js/main.js',
-    //     ],
-    //     dest: 'site/assets/js/main.min.js'
-    //   },
-    //   options : {
-    //     sourcemap: false,
-    //     allinone: false
-    //   }
-    // },
+    minified : {
+      files: {
+        src: [
+          'js/main.js',
+        ],
+        dest: '../site/assets/js/'
+      },
+      options : {
+        sourcemap: false,
+        allinone: false
+      }
+    },
 
     // Watch
     watch: {
@@ -81,6 +81,10 @@ module.exports = function(grunt) {
           livereload: false
         }
       },
+      minified: {
+        files: 'js/*.js',
+        tasks: ['minified'],
+      }
     }
 
   });
