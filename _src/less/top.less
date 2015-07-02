@@ -1,0 +1,89 @@
+body {
+	font-family: 'Dosis', sans-serif;
+
+	header#header {
+
+		ul.header-list {
+			height: 100vh;
+			border: 0;
+			padding: 0;
+
+			li.header-list-item {
+				width: 25%;
+				height: 100%;
+				float: left;
+				box-sizing: border-box;
+				color: white;
+				background: url(../img/bg-quand.jpg) center center no-repeat;
+				background-size: 120%;
+				.transitionAll(0.8s);
+
+				& > a {
+					height: 100%;
+					display: block; 
+					color: white;
+					text-decoration: none;
+					position: relative;
+					background: @black-top-bg;
+
+					.header-list-item-infos {
+						position: absolute;
+						top: 50%;
+						width: 100%;
+						margin-top: -132px;
+						.transitionAll(0.3s);
+
+						i.header-list-item-icon {
+							width: 70px;
+							height: 70px;
+							margin: 0 auto;
+							padding: 20px;
+							display: block;
+							.fontSize35;
+							border: 1px solid white;
+							.borderRadiusAll(50%);
+							margin-bottom: 50px;
+							text-align: center;
+							line-height: 4.5rem;
+						}
+
+						p {
+							text-align: center;
+
+							&.header-list-item-title {
+								.fontSize28;
+								font-weight: 500;
+								letter-spacing: 5px;
+								text-transform: uppercase;
+								margin-bottom: 30px;
+							}
+
+							&.header-list-item-subtitle {
+								.fontSize16;
+								font-weight: 300;
+								letter-spacing: 5px;
+							}
+						}
+					}
+				}
+				&:hover {
+					background-size: 110%;
+
+					& > a {
+						background: transparent;
+
+						.header-list-item-infos {
+							top: 30%;
+						}
+					}
+				}
+				.transitionAll(0.5s);
+
+				@media (max-width: 991px) {
+					width: 100%;
+					height: 25%;
+				}
+			}
+		}
+	}
+}

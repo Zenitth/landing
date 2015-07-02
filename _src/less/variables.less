@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-size: 10px;
 }
 ol, ul {
 	list-style: none;
@@ -45,4 +46,43 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+
+.fontSize9 { font-size: 0.9rem; }
+.fontSize10 { font-size: 1rem; }
+.fontSize11 { font-size: 1.1rem; }
+.fontSize12 { font-size: 1.2rem; }
+.fontSize13 { font-size: 1.3rem; }
+.fontSize14 { font-size: 1.4rem; }
+.fontSize15 { font-size: 1.5rem; }
+.fontSize16 { font-size: 1.6rem; }
+.fontSize17 { font-size: 1.7rem; }
+.fontSize18 { font-size: 1.8rem; }
+.fontSize19 { font-size: 1.9rem; }
+.fontSize20 { font-size: 2rem; }
+.fontSize24 { font-size: 2.4rem; }
+.fontSize25 { font-size: 2.5rem; }
+.fontSize27 { font-size: 2.7rem; }
+.fontSize28 { font-size: 2.8rem; }
+.fontSize30 { font-size: 3rem; }
+.fontSize35 { font-size: 3.5rem; }
+.fontSize50 { font-size: 5rem; }
+
+
+
+@black-top-bg			: #111111;
+
+
+.borderRadiusAll(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+.transitionAll(@trans) {
+	-webkit-transition: all @trans ease-in;
+	-moz-transition: all @trans ease-in;
+	-ms-transition: all @trans ease-in;
+	-o-transition: all @trans ease-in;
+	transition: all @trans ease-in;
 }

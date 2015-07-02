@@ -1,2 +1,4 @@
 _src/node_modules
 _src/*.log
+_DS_Store
+.DS_Store
