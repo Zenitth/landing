@@ -73,6 +73,7 @@ table {
 
 @black-top-bg			: #111111;
 @grey-light				: #3e3e3e;
+@grey-didot				: #2c2c2c;
 
 
 .borderRadiusAll(@radius) {
@@ -80,10 +81,18 @@ table {
 	-moz-border-radius: @radius;
 	border-radius: @radius;
 }
-.transitionAll(@trans) {
+.transitionAllCustom(@trans) {
 	-webkit-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
 	-moz-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
 	-ms-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
 	-o-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
 	transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
+}
+
+.transitionAll(@trans) {
+	-webkit-transition: all @trans ease-out;
+	-moz-transition: all @trans ease-out;
+	-ms-transition: all @trans ease-out;
+	-o-transition: all @trans ease-out;
+	transition: all @trans ease-out;
 }
