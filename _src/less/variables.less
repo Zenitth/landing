@@ -72,6 +72,7 @@ table {
 
 
 @black-top-bg			: #111111;
+@grey-light				: #3e3e3e;
 
 
 .borderRadiusAll(@radius) {
@@ -80,9 +81,9 @@ table {
 	border-radius: @radius;
 }
 .transitionAll(@trans) {
-	-webkit-transition: all @trans ease-in;
-	-moz-transition: all @trans ease-in;
-	-ms-transition: all @trans ease-in;
-	-o-transition: all @trans ease-in;
-	transition: all @trans ease-in;
+	-webkit-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
+	-moz-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
+	-ms-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
+	-o-transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
+	transition: all @trans cubic-bezier(0.05, 1.77, 0.77, 0.73);
 }

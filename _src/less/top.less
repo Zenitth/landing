@@ -15,7 +15,7 @@ body {
 				box-sizing: border-box;
 				color: white;
 				background: url(../img/bg-quand.jpg) center center no-repeat;
-				background-size: 120%;
+				background-size: cover;
 				.transitionAll(0.8s);
 
 				& > a {
@@ -24,7 +24,11 @@ body {
 					color: white;
 					text-decoration: none;
 					position: relative;
-					background: @black-top-bg;
+					background-color: @black-top-bg;
+
+					@media (max-width: 991px) {
+						background-color: transparent;
+					}
 
 					.header-list-item-infos {
 						position: absolute;
@@ -33,6 +37,12 @@ body {
 						margin-top: -132px;
 						.transitionAll(0.3s);
 
+						@media (max-width: 991px) {
+							position: initial;
+							margin: 0;
+							padding: 10px;
+						}
+
 						i.header-list-item-icon {
 							width: 70px;
 							height: 70px;
@@ -40,40 +50,60 @@ body {
 							padding: 20px;
 							display: block;
 							.fontSize35;
-							border: 1px solid white;
+							border: 1px solid @grey-light;
 							.borderRadiusAll(50%);
 							margin-bottom: 50px;
 							text-align: center;
 							line-height: 4.5rem;
+
+							@media (max-width: 991px) {
+								width: 30px;
+								height: 30px;
+								.fontSize16;
+								margin-bottom: 10px;
+								line-height: 2.15rem;
+								padding: 10px;
+							}
 						}
 
 						p {
 							text-align: center;
 
 							&.header-list-item-title {
-								.fontSize28;
+								.fontSize20;
 								font-weight: 500;
 								letter-spacing: 5px;
 								text-transform: uppercase;
 								margin-bottom: 30px;
+
+								@media (max-width: 991px) {
+									margin-bottom: 10px;
+									.fontSize13;
+								}
 							}
 
 							&.header-list-item-subtitle {
-								.fontSize16;
+								.fontSize13;
 								font-weight: 300;
 								letter-spacing: 5px;
+
+								@media (max-width: 991px) {
+									.fontSize10;
+								}
 							}
 						}
 					}
-				}
-				&:hover {
-					background-size: 110%;
+				} //end link
 
-					& > a {
-						background: transparent;
+				@media (min-width: 991px) {
+					&:hover {
 
-						.header-list-item-infos {
-							top: 30%;
+						& > a {
+							background-color: rgba(0, 0, 0, 0);
+
+							.header-list-item-infos {
+								top: 30%;
+							}
 						}
 					}
 				}
