@@ -1,1 +1,1 @@
-$(document).ready(function(){992>$(window).width()&&$(".header-list-item").click(function(){$(this).hasClass("opened")?$(this).removeClass("opened"):($(".header-list-item").removeClass("opened"),$(this).addClass("opened"))})});
+$(document).ready(function(){992>$(window).width()&&$(".header-list-item").click(function(e){e.preventDefault(),$(this).hasClass("opened")?$(this).removeClass("opened"):($(".header-list-item").removeClass("opened"),$(this).addClass("opened"))})});

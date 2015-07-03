@@ -3,6 +3,12 @@ body {
 
 	header#header {
 
+		h1 {
+			background: black;
+			padding: 20px;
+			text-align: center;		
+		}
+
 		ul.header-list {
 			height: 100vh;
 			border: 0;
@@ -187,4 +193,68 @@ body {
 			}
 		}
 	}
+	// end header
+
+	.newsletter {
+		padding: 60px;
+		background: black;
+
+		@media (max-width: 991px) {
+			padding: 30px 15px;
+		}
+
+		p {
+			color: white;
+			.fontSize18;
+			text-align: center;
+
+			@media (max-width: 991px) {
+				.fontSize13;
+			}
+		}
+
+		#mc_embed_signup {
+			margin-top: 25px;
+
+			form {
+				width: 427px;
+				margin: 0 auto;
+
+				@media (max-width: 991px) {
+					width: 100%;
+				}
+
+				input {
+					color: white;
+					padding: 8px;
+					border: 1px solid @grey-light;
+					background: transparent;
+					.fontSize9;
+					box-sizing: border-box;
+				}
+
+				input[type=email] {
+					width: 300px;
+					background: transparent;
+					margin-right: 20px;
+
+					@media (max-width: 991px) {
+						width: 100%;
+						margin-bottom: 10px;
+					}
+				}
+
+				input[type=submit] {
+					@media (max-width: 991px) {
+						width: 100%;
+					}
+				}
+
+				@media (min-width: 991px) {
+					.mc-field-group { float: left; }
+				}
+			}
+		}
+	}
+
 }
