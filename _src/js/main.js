@@ -4,7 +4,7 @@ $(document).ready( function() {
 	if ($(window).width() < 992) {
 		$('.header-list-item').click( function(e) {
 			e.preventDefault();
-			
+
 			if (!$(this).hasClass('opened')) {
 				$('.header-list-item').removeClass('opened');
 				$(this).addClass('opened');
@@ -13,5 +13,12 @@ $(document).ready( function() {
 			}
 		});
 	}
+
+	$('.header-arrow').click( function(e) {
+		e.preventDefault();
+		$('body').animate({
+			scrollTop: $('.fullscreen-bg').offset().top
+		});
+	});
 
 });

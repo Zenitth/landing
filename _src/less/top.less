@@ -2,6 +2,44 @@ body {
 	font-family: 'Dosis', sans-serif;
 
 	header#header {
+		position: relative;
+
+		p.header-baseline {
+			background: black;
+			color: white;
+			text-align: center;
+			letter-spacing: 2px;
+			padding: 20px 0;
+			.fontSize10;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.header-arrow {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			bottom: 10%;
+			left: 50%;
+			padding: 10px;
+			margin-left: -19px;
+			display: block;
+			cursor: pointer;
+			border: 1px solid white;
+			.borderRadiusAll(50%);
+			line-height: 1.8rem;
+			.transitionAllCustom(0.3s);
+			z-index: 100;
+			background: rgba(0, 0, 0, 0.5);
+
+			&:hover {
+				padding: 15px;
+				margin-left: -26px;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
 
 		h1 {
 			background: black;
@@ -10,7 +48,7 @@ body {
 		}
 
 		ul.header-list {
-			height: 100vh;
+			height: 90vh;
 			border: 0;
 			padding: 0;
 
@@ -47,6 +85,7 @@ body {
 					position: relative;
 					background-color: @black-top-bg;
 					overflow-y: hidden;
+					cursor: default;
 
 					@media (max-width: 991px) {
 						background-color: transparent;
@@ -62,7 +101,7 @@ body {
 						@media (max-width: 991px) {
 							position: initial;
 							margin: 0;
-							padding: 10px;
+							padding: 10px 0;
 						}
 
 						i.header-list-item-icon {
@@ -138,12 +177,12 @@ body {
 							font-style: italic;
 							font-weight: 100;
 							color: @grey-didot;
-							.fontSize11;
+							.fontSize10;
 						}
 					}
 				} //end link
 
-				@media (min-width: 991px) {
+				@media (min-width: 992px) {
 					&:hover {
 
 						& > a {
