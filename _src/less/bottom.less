@@ -12,11 +12,28 @@ body{
 		  		margin-left:auto;
 		  		margin-right:auto;
 		  		position:absolute;
-		  		z-index:100;
-		  		top: 0;
-			  	right: 0;
-			  	bottom: 0;
-			  	left: 0;
+		  		top: 50;
+		  		right: 0;
+		  		bottom: 0;
+		  		left: 0;
+		  		&.poeme{
+		  			top:0;
+		  		}
+		  		p{
+		  			tex-align:right;
+		  			font-size:22px;
+		  			font-family: 'Dosis', sans-serif;
+		  			color: #FFF;
+		  			font-weight:500;
+		  			&.legende{
+		  				font-weight:300;
+		  				font-size:22px;
+		  				margin-top:15%;
+		  			}
+		  			span{
+		  				diplay:block;
+		  			}
+		  		}
 			  	.apps{
 			  		width:50%;
 			  		float:left;
@@ -51,7 +68,7 @@ body{
 	  }
 	}
  
-	@media (max-width: 767px) {
+	@media (max-width: 991px) {
 	  .fullscreen-bg {
 	    background: url('../img/sun.png') center center / cover no-repeat;
 	  }
