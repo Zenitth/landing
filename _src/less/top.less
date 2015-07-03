@@ -307,6 +307,13 @@ body {
 				input[type=submit] {
 					background: rgba(255, 255, 255, 0.8);
 					color: black;
+					cursor: pointer;
+					.transitionAll(0.2s);
+
+					&:hover {
+						background: rgba(255, 255, 255, 1);
+					}
+
 					@media (max-width: 991px) {
 						width: 100%;
 					}
