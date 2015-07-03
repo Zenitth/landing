@@ -1,21 +1,20 @@
 body{
 	.fullscreen-bg {
-			position:relative;
+
 		  	top: 0;
 		  	right: 0;
 		  	bottom: 0;
 		  	left: 0;
 		  	overflow: hidden;
 		  	z-index: -100;
-		  	section{
-		  		width:960px;
+		  	height:100vh;	 
+	    	background: url('../img/sun.jpg') center center / cover no-repeat;
+	  		position:absolute;
+		  	.container{
+		  		width:100%;
+		  		max-width:960px;
 		  		margin-left:auto;
 		  		margin-right:auto;
-		  		position:absolute;
-		  		top: 50;
-		  		right: 0;
-		  		bottom: 0;
-		  		left: 0;
 		  		&.poeme{
 		  			top:0;
 		  		}
@@ -35,47 +34,33 @@ body{
 		  			}
 		  		}
 			  	.apps{
-			  		width:50%;
-			  		float:left;
+		
 			  	}
 			  	.mobiles{
-			  		width:50%;
-			  		float:right;
+			  		position:fixed;
+			  		bottom:0;
+			  		left:50%;
 			  	}
 			}
 	}
 
 	.fullscreen-bg__video {
-			posotion:relative;
+			position:fixed;
 		  	top: 0;
 		  	left: 0;
 		  	width: 100%;
 		  	height: 100%;
 		  	z-index: -100;
+		  	object-fit:cover;
 	}
  
-	@media (min-aspect-ratio: 16/9) {
-		.fullscreen-bg__video {
-		    height: 300%;
-		    top: -100%;
-		 }
+	@media (max-width: 768px) {
+	.tablet{
+
+		display:none;
 	}
- 
-	@media (max-aspect-ratio: 16/9) {
-	  .fullscreen-bg__video {
-	    width: 300%;
-	    left: -100%;
-	  }
-	}
- 
-	@media (max-width: 991px) {
-	  .fullscreen-bg {
-	    background: url('../img/sun.png') center center / cover no-repeat;
-	  }
-	 
-	  .fullscreen-bg__video {
-	    display: none;
-	  }
+
+	
 	}
 
 
