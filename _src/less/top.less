@@ -256,5 +256,37 @@ body {
 			}
 		}
 	}
+	// end newsleter
+
+	section.mentions {
+		height: 100vh;
+		background: black;
+		padding: 30px 0;
+		box-sizing: border-box;
+
+		p {
+			width: 960px;
+			margin: 0 auto;
+			color: white;
+			.fontSize10;
+			line-height: 1.4rem;
+			box-sizing: border-box;
+
+			@media (max-width: 991px) {
+				width: 100%;
+				padding: 0 15px;
+			}
+
+			a {
+				color: @grey-light;
+				text-decoration: underline;
+				font-weight: 500;
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
 
 }
