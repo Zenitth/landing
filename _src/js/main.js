@@ -17,7 +17,7 @@ $(document).ready( function() {
 	$('.header-arrow').click( function(e) {
 		e.preventDefault();
 		$('body').animate({
-			scrollTop: $('.fullscreen-bg').offset().top
+			scrollTop: $('.newsletter').offset().top
 		});
 	});
 
