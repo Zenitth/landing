@@ -65,9 +65,19 @@ body{
   						&:first-child {
   							.fontSize20;
   							margin-bottom: 8px;
+  							font-weight: 300;
+
+  							@media(max-width: 991px) {
+  								.fontSize16;
+  							}
   						}
   						&:nth-child(2n) {
   							.fontSize14;
+  							font-weight: 100;
+
+  							@media(max-width: 991px) {
+  								.fontSize10;
+  							}
   						}
   					}
   				}
@@ -87,7 +97,7 @@ body{
 
 	footer {
 		padding: 20px 0;
-		background: black;
+		background: #151515;
 		text-align: center;
 
 		a {

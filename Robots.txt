@@ -1,0 +1,4 @@
+# Référencement webophil.net
+# Fichier robots.txt pour le site : http://zenitth.com
+User-agent: *
+Sitemap: http://zenitth.com/sitemap.xml

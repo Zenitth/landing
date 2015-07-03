@@ -1,5 +1,6 @@
 body {
 	font-family: 'Dosis', sans-serif;
+	background: black;
 
 	header#header {
 		position: relative;
@@ -31,6 +32,10 @@ body {
 			z-index: 100;
 			background: rgba(0, 0, 0, 0.5);
 
+			@media (max-width: 991px) {
+				display: none;
+			}
+
 			&:hover {
 				padding: 15px;
 				margin-left: -26px;
@@ -43,7 +48,7 @@ body {
 
 		h1 {
 			background: black;
-			padding: 20px;
+			padding: 30px 0 20px;
 			text-align: center;		
 		}
 
@@ -121,7 +126,7 @@ body {
 								width: 30px;
 								height: 30px;
 								.fontSize16;
-								margin-bottom: 10px;
+								margin-bottom: 6px;
 								line-height: 2.15rem;
 								padding: 10px;
 							}
@@ -138,7 +143,7 @@ body {
 								margin-bottom: 30px;
 
 								@media (max-width: 991px) {
-									margin-bottom: 10px;
+									margin-bottom: 5px;
 									.fontSize13;
 								}
 							}
@@ -146,7 +151,8 @@ body {
 							&.header-list-item-subtitle {
 								.fontSize11;
 								font-weight: 300;
-								letter-spacing: 5px;
+								letter-spacing: 3px;
+								font-family: 'Roboto', sans-serif;
 
 								@media (max-width: 991px) {
 									.fontSize10;
@@ -165,11 +171,19 @@ body {
 						.transitionAll(0.3s);
 						opacity: 0;
 
+						@media (max-width: 991px) {
+							padding: 10px 40px;
+						}
+
 						hr {
 							width: 25%;
 							margin: 0 auto 20px;
 							border: none;
 							border-top: 1px solid @grey-didot;
+
+							@media (max-width: 991px) {
+								margin: 0 auto 10px;
+							}
 						}
 
 						p {
@@ -177,7 +191,12 @@ body {
 							font-style: italic;
 							font-weight: 100;
 							color: @grey-didot;
+							text-align: center;
 							.fontSize10;
+
+							&:last-child {
+								margin-top: 15px;
+							}
 						}
 					}
 				} //end link
@@ -236,16 +255,18 @@ body {
 
 	.newsletter {
 		padding: 60px;
-		background: black;
+		background: url(../img/bg-newsletter.png) #151515 no-repeat center right;
 
 		@media (max-width: 991px) {
 			padding: 30px 15px;
 		}
 
-		p {
+		h2 {
 			color: white;
 			.fontSize18;
 			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			font-weight: 300;
 
 			@media (max-width: 991px) {
 				.fontSize13;
@@ -284,6 +305,8 @@ body {
 				}
 
 				input[type=submit] {
+					background: rgba(255, 255, 255, 0.8);
+					color: black;
 					@media (max-width: 991px) {
 						width: 100%;
 					}
@@ -310,6 +333,8 @@ body {
 			.fontSize10;
 			line-height: 1.4rem;
 			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+
 
 			@media (max-width: 991px) {
 				width: 100%;
