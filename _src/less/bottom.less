@@ -20,6 +20,10 @@ body{
   		position: relative;
   		height: 90vh;
 
+      @media (max-width: 991px) {
+        height: 70vh;
+      }
+
       .header-arrow {
         width: 20px;
         height: 20px;
@@ -36,10 +40,6 @@ body{
         .transitionAllCustom(0.3s);
         z-index: 100;
         background: rgba(0, 0, 0, 0.5);
-
-        @media (max-width: 991px) {
-          display: none;
-        }
 
         &:hover {
           padding: 15px;
@@ -142,7 +142,7 @@ body{
 
   					@media (max-width: 991px) {
   						margin-top: 10px;
-  						width: 90%;
+  						width: 50%;
   					}
   				}
   			}
