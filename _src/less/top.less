@@ -2,160 +2,42 @@ body {
 	font-family: 'Dosis', sans-serif;
 	background: black;
 
-	section#header {
-		position: relative;
+	section#concept,section#lancement,section#plateforme,section#besoin {
+			.bg-img{
+				width:50%;
+				float:left;
+				height:100vh;
+				background:url(../img/intelligence.jpg) no-repeat top 0 left 0;
+				background-size: cover;
+			}
 
-		ul.header-list {
-			height: 90vh;
-			border: 0;
-			padding: 0;
-
-			li.header-list-item {
-				width: 25%;
-				height: 100%;
-				float: left;
-				box-sizing: border-box;
-				color: white;
-				.transitionAllCustom(0.8s);
-
-				&:nth-child(1n) {
-					background: url(../img/bg-1st.jpg) center center no-repeat;
-					background-size: cover;
-				}
-				&:nth-child(2n) {
-					background: url(../img/bg-2th.jpg) center center no-repeat;
-					background-size: cover;
-				}
-				&:nth-child(3n) {
-					background: url(../img/bg-3th.jpg) center center no-repeat;
-					background-size: cover;
-				}
-				&:nth-child(4n) {
-					background: url(../img/bg-4th.jpg) center center no-repeat;
-					background-size: cover;
-				}
-
-				& > a {
-					height: 100%;
-					display: block; 
-					color: white;
-					text-decoration: none;
-					position: relative;
-					background-color: @black-top-bg;
-					overflow-y: hidden;
-					cursor: default;
-
-					@media (max-width: 991px) {
-						background-color: transparent;
+			.header-desc{
+				width:50%;
+				float:left;
+				height:100vh;
+				background:#fff;
+				color:#000;
+				.header-desc-content{
+					margin-top:50vh;
+					padding:5%;
+					width:50%;
+					h2{
+						font-family:Roboto,sans-serif;
+						font-size:3.6rem;
 					}
 
-					.header-list-item-infos {
-						position: absolute;
-						top: 50%;
-						width: 100%;
-						margin-top: -132px;
-						.transitionAllCustom(0.3s);
-
-						@media (max-width: 991px) {
-							position: initial;
-							margin: 0;
-							padding: 10px 0;
-						}
-
-						i.header-list-item-icon {
-							width: 70px;
-							height: 70px;
-							margin: 0 auto;
-							padding: 20px;
-							display: block;
-							.fontSize35;
-							border: 1px solid @grey-light;
-							.borderRadiusAll(50%);
-							margin-bottom: 50px;
-							text-align: center;
-							line-height: 4.5rem;
-
-							@media (max-width: 991px) {
-								width: 30px;
-								height: 30px;
-								.fontSize16;
-								margin-bottom: 6px;
-								line-height: 2.15rem;
-								padding: 10px;
-							}
-						}
-
-						p {
-							text-align: center;
-
-							&.header-list-item-title {
-								.fontSize20;
-								font-weight: 500;
-								letter-spacing: 5px;
-								text-transform: uppercase;
-								margin-bottom: 30px;
-
-								@media (max-width: 991px) {
-									margin-bottom: 5px;
-									.fontSize13;
-								}
-							}
-
-							&.header-list-item-subtitle {
-								.fontSize11;
-								font-weight: 300;
-								letter-spacing: 3px;
-								font-family: 'Roboto', sans-serif;
-
-								@media (max-width: 991px) {
-									.fontSize10;
-								}
-							}
-						}
+					p{
+						font-family:Roboto,sans-serif;
+						font-size:1.2rem;
 					}
+				}
+			}
 
-					.header-list-item-alexandrin {
-						width: 100%;
-						padding: 20px 40px;
-						background: white;
-						position: absolute;
-						bottom: -100%;
-						left: 0;
-						min-height: 31vh;
-						.transitionAll(0.3s);
-						opacity: 0;
-						box-sizing: border-box;
-
-						@media (max-width: 991px) {
-							padding: 10px 40px;
-						}
-
-						hr {
-							width: 25%;
-							margin: 0 auto 20px;
-							border: none;
-							border-top: 1px solid @grey-didot;
-
-							@media (max-width: 991px) {
-								margin: 0 auto 10px;
-							}
-						}
-
-						p {
-							font-family: "Didot", serif;
-							font-style: italic;
-							font-weight: 100;
-							color: @grey-didot;
-							text-align: center;
-							.fontSize10;
-
-							&:last-child {
-								margin-top: 15px;
-							}
-						}
-					}
-				} //end link
-
+			&:after {
+    				content: " ";
+    				display: block;
+    				clear: both;
+			}
 				@media (min-width: 992px) {
 					&:hover {
 
@@ -202,9 +84,15 @@ body {
 				@media (max-width: 991px) {
 					width: 100%;
 					height: 25%;
+					.bg-img{
+						display:none;
+					}
+					.header-desc{
+						width:100vh;
+					}
 				}
-			}
-		}
+			
+		
 	}
 	// end header
 
