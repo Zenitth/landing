@@ -37,7 +37,7 @@ body {
 		p {
 			&.baseline {
 				margin-top: 110px;
-				color: @grey-news;
+				color: @white;
 				.fontSize15;
 				text-align: center;
 
@@ -81,20 +81,13 @@ body {
 		}
 	}
 
-	.inter-section {
-		padding: 20px;
-		background: url(../img/bgHeadSection.png) center center no-repeat;
-		background-size: cover;
 
-		h3 {
-			width: 450px;
-			margin: 0 auto;
-			padding: 10px;
-			background: @red-dark;
-			font-family: 'apache', sans-serif;
+	h3 {
+			
+			font-family: 'Dosis', sans-serif;
 			.fontSize44;
 			text-align: center;
-			color: @yellow-light;
+			color: @white;
 			box-sizing: border-box;
 
 			@media (max-width: 991px) {
@@ -102,57 +95,42 @@ body {
 				.fontSize24;
 			}
 
-			&:before {
-				width: 32px;
-				height: 32px;
-				content: "";
-				display: block;
-				background: url(../img/star.png) center center no-repeat;
-				float: left;
-				margin:15px 0 0 10px;
-
-				@media (max-width: 991px) {
-					margin: 0 0 0 10px;
-				}
-			}
-			&:after {
-				width: 32px;
-				height: 32px;
-				content: "";
-				display: block;
-				background: url(../img/star.png) center center no-repeat;
-				float: right;
-				margin: 15px 10px 0 0;
-
-				@media (max-width: 991px) {
-					margin: 0 0 0 10px;
-				}
-			}
 		}
-	}
 
 	section.concept {
 		background: url(../img/bg/concept.png) center center;
 		background-size: cover;
+		h3{
+			color:@grey-title;
+		}
 
 		.container {
 			height: 100%;
 			.infos-wrapper {
 				position: absolute;
-				bottom: 0;
+				bottom: 6vh;
+				left: 22vh;
+				@media (max-width: 438px) {
+					bottom: 9vh;
+					left:4vh;
+				}
 
 				h2 {
-					font-family: 'apache', sans-serif;
+					font-family: 'Dosis', sans-serif;
 					.fontSize44;
 					color: @yellow-light;
 				}
 
 				p {
 					width: 50%;
-					color: @yellow-light;
+					color: @grey-title;
 					.fontSize10;
 					line-height: 1.3rem;
+					font-family: 'Dosis', sans-serif;
 					padding: 20px 20px 20px 0;
+					span{
+						color: @red-button;
+					}
 
 					@media (max-width: 991px) {
 						width: 100%;
@@ -167,26 +145,31 @@ body {
 		background-size: cover;
 
 		@media (max-width: 991px) {
-			background: url(../img/bg/lancement.png) center right;
+			background: url(../img/bg/lancement.png) center center;
+
 		}
 
 		.container {
 			height: 100%;
 			.infos-wrapper {
 				position: absolute;
-				bottom: 0;
-				right: 0;
+				bottom: 86px;
+				right: 65px;
+				@media (max-width: 438px) {
+					bottom: 7vh;
+					right:1vh;
+				}
 
 				h2 {
-					font-family: 'apache', sans-serif;
+					font-family: 'Dosis', sans-serif;
 					.fontSize44;
 					color: @yellow-light;
 					text-align: right;
-					padding-top: 150px;
-					background: url(../img/bg/couronne.png) right top no-repeat;
 
-					@media (max-width: 991px) {
+					@media (max-width: 438px) {
 						padding-right: 15px;
+						margin-bottom: 1rem;
+						.fontSize18;
 					}
 				}
 
@@ -198,10 +181,13 @@ body {
 					.fontSize10;
 					line-height: 1.3rem;
 					padding: 20px 0 20px 20px;
+					span{
+						color: @red-button;
+					}
 
 					@media (max-width: 991px) {
 						width: 100%;
-						padding: 20px 15px 20px 20px;
+						/*padding: 20px 15px 20px 20px;*/
 					}
 				}
 			}
@@ -213,27 +199,37 @@ body {
 		background-size: cover;
 
 		@media (max-width: 991px) {
-			background: url(../img/bg/plateforme.png) center left;
+			background: url(../img/bg/plateforme.png) center center;
 		}
 
 		.container {
 			height: 100%;
 			.infos-wrapper {
 				position: absolute;
-				bottom: 0;
+				bottom: 10vh;
+				left: 10vh;
+				@media (max-width: 991px) {
+					position: absolute;
+					bottom: 10vh;
+					left: 0vh;
+				}
 
 				h2 {
-					font-family: 'apache', sans-serif;
+					font-family: 'Dosis', sans-serif;
 					.fontSize44;
-					color: @yellow-light;
+					color: @white;
 				}
+
 
 				p {
 					width: 50%;
-					color: @yellow-light;
+					color: @white;
 					.fontSize10;
 					line-height: 1.3rem;
 					padding: 20px 20px 20px 0;
+					span{
+						color: @text-blue;
+					}
 
 					@media (max-width: 991px) {
 						width: 100%;
@@ -248,23 +244,30 @@ body {
 		background-size: cover;
 
 		media (max-width: 991px) {
-			background: url(../img/bg/lancement.png) center right;
+			background: url(../img/bg/besoin.png) center center;
 		}
 
 		.container {
 			height: 100%;
 			.infos-wrapper {
 				position: absolute;
-				bottom: 0;
+				bottom: -4px;
+				right: 100px;
+				@media (max-width: 438px) {
+					position: absolute;
+					bottom: 0;
+					right: 1vh;
+				}
 
 				h2 {
-					font-family: 'apache', sans-serif;
+					font-family: 'Dosis', sans-serif;
 					.fontSize44;
 					color: @yellow-light;
 					text-align: right;
 
 					@media (max-width: 991px) {
-						padding-right: 15px;
+						width:100%;
+						/*padding-right: 15px;*/
 					}
 				}
 
@@ -276,6 +279,9 @@ body {
 					.fontSize10;
 					line-height: 1.3rem;
 					padding: 20px 0 20px 20px;
+					span{
+						color: @red-button;
+					}
 
 					@media (max-width: 991px) {
 						width: 100%;
@@ -389,7 +395,7 @@ body {
 
 			.container .infos-wrapper h2 {
 				@media (max-width: 992px) {
-					.fontSize30;
+					.fontSize24;
 				}
 			}
 		}
@@ -422,13 +428,13 @@ body {
 						overflow: none;
 
 						&.fb {
-							background: url(../img/social.png) 0 0 no-repeat;
+							background: url(../img/bg/social.png) 0 0 no-repeat;
 						}
 						&.tw {
-							background: url(../img/social.png) -82px 0 no-repeat;
+							background: url(../img/bg/social.png) -82px 0 no-repeat;
 						}
 						&.insta {
-							background: url(../img/social.png) -139px 0 no-repeat;
+							background: url(../img/bg/social.png) -139px 0 no-repeat;
 						}
 					}
 				}
@@ -445,6 +451,10 @@ body {
 			padding: 20px 0;
 			background: @grey-news;
 			text-align: center;
+
+			p{
+				color: @white;
+			}
 
 			a {
 				color: white;
