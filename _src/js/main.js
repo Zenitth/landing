@@ -21,13 +21,6 @@ $(document).ready( function() {
 		});
 	});
 
-	$('#header .button').click( function(e) {
-		e.preventDefault();
-		$('body').animate({
-			scrollTop: $('#newsletter').offset().top
-		});
-	});
-
 	$('#header .apple').click( function(e) {
 		$('.messageMicrosoft').hide();
 		$('.messageApple').show();
