@@ -28,4 +28,14 @@ $(document).ready( function() {
 		});
 	});
 
+	$('#header .apple').click( function(e) {
+		$('.messageMicrosoft').hide();
+		$('.messageApple').show();
+	});
+
+	$('#header .microsoft').click( function(e) {
+		$('.messageApple').hide();
+		$('.messageMicrosoft').show();
+	});
+
 });
