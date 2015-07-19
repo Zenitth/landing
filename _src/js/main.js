@@ -24,11 +24,15 @@ $(document).ready( function() {
 	$('#header .apple').click( function(e) {
 		$('.messageMicrosoft').hide();
 		$('.messageApple').show();
+		$('.microsoft').removeClass("current");
+		$(this).addClass("current");
 	});
 
 	$('#header .microsoft').click( function(e) {
 		$('.messageApple').hide();
 		$('.messageMicrosoft').show();
+		$('.apple').removeClass("current");
+		$(this).addClass("current");
 	});
 
 });
